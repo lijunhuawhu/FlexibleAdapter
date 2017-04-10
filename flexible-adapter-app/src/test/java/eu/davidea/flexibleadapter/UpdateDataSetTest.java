@@ -35,6 +35,7 @@ public class UpdateDataSetTest {
 	@Test
 	public void testUpdateDataSet_WithAnimation() throws Exception {
 		mAdapter = new FlexibleAdapter<>(mItems);
+		mAdapter.setNotifyChangeOfUnfilteredItems(true);
 		mAdapter.showAllHeaders();
 
 		List<AbstractFlexibleItem> initialItems = mAdapter.getItems();
@@ -48,6 +49,7 @@ public class UpdateDataSetTest {
 	@Test
 	public void testUpdateDataSet_WithNotifyDataSetChanged() throws Exception {
 		mAdapter = new FlexibleAdapter<>(mItems);
+		mAdapter.setNotifyChangeOfUnfilteredItems(true);
 		mAdapter.showAllHeaders();
 
 		List<AbstractFlexibleItem> initialItems = mAdapter.getItems();
